@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://geeklu.com
+url: https://xiangshuai.github.com/
 author: kevin
 pygments: true
 paginate: 24
