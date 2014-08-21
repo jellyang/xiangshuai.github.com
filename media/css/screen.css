@@ -143,11 +143,13 @@ hr {
     margin: 0 0 22px 0;
 }
 a {
-    color: #8B1A1A;
+    color: #4d5559;
+    text-decoration:none;	//超链接无下划线
 }
 a:visited {
     //color: #B22222;
-    color: #999999;
+    color: #99a1a6;
+    text-decoration:none;
 }
 a.ss-icon {
 	font-size: 20px;
@@ -157,6 +159,7 @@ a.ss-icon {
 a:hover {
     //color: #EE0000;
     color: #8B0000;
+    text-decoration:underline;
 }
 em {
     font-style: italic;
