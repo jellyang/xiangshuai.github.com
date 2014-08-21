@@ -154,7 +154,7 @@ hr {
     margin: 0 0 22px 0;
 }
 a {
-    color: #4d5559;
+    color: #dd0000;
     text-decoration:none;	//超链接无下划线
 }
 a:visited {
@@ -169,7 +169,7 @@ a.ss-icon {
 }
 a:hover {
     //color: #EE0000;
-    color: #8B0000;
+    color: #333333;
     text-decoration:underline;
 }
 em {
@@ -183,6 +183,11 @@ img.avatar {
     float: right;
 }
 
+// 标题下说明
+.top-meta{
+	color: #888;
+	font-size: 12px;
+}
 .meta{
     text-align:right;
     font-size:14px;
