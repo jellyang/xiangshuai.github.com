@@ -61,7 +61,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
             c = container.width(),
             a = h2outline.width();
         h2outline.css('right',
-                      (w - c) / 2 - a + 50);
+                      (w - c) / 2 - a - 50);
     });
 
     $(window).resize();
