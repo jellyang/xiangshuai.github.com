@@ -23,7 +23,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
                          .css('position', 'fixed')
                          .css('top', $('#main').position().top + 50)
                          .css('width', '120px')
-                         .css('text-align', 'right')
+                         .css('text-align', 'left')
                          .html(outline_ul));
 
     /**
