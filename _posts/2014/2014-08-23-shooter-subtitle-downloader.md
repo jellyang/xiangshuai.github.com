@@ -1,3 +1,13 @@
+---
+layout: post
+title: shooter subtitle downloader详细分析
+categories:
+- Web
+tags:
+- 电影
+- 电影字幕
+- Python
+---
 ##动机
 前段时间刚刚学习了一下Python，感觉Python确实非常的简单和强大，碰巧逛微博时发现了伯乐在线上面的一篇文章：[“你所写过的最好的Python脚本是什么？”](http://blog.jobbole.com/75244/)其中有个叫[subtitle-downloader](https://github.com/manojmj92/subtitle-downloader)的脚本引发了我的兴趣。此脚本可以根据电影在网上下载对应的字幕，可惜只能在[thesubdb](http://thesubdb.com/)网下载英文字幕。由于我也非常喜欢看电影，所以萌生了可下载中文字幕的Python脚本，也作为这段时间学习Python语言的实践总结。
 
@@ -89,3 +99,4 @@ GitHub: [shooter-subtitle-downloader](https://github.com/xiangshuai/shooter-subt
 3. SparkMD5:[http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html](http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html)
 4. MD5 Shootout:[http://jsperf.com/md5-shootout/7](http://jsperf.com/md5-shootout/7)
 5. Python md5 module: [http://effbot.org/librarybook/md5.htm](http://effbot.org/librarybook/md5.htm)
+6. MD5测试比对：[http://www.cmd5.com/](http://www.cmd5.com/)
