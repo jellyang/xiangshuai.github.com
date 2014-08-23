@@ -37,9 +37,9 @@ tags:
 5. json中的每条则记录了字幕的链接和其对应延时等信息
 6. 通过json中提供的链接便可下载对应电影的字幕文件
 
-关于上述的精确匹配过程，主要是通过分析sphash.js的脚本和url测试得知，下面主要对其进行分析：
+关于上述的精确匹配过程，主要是通过分析[sphash.js](http://www.shooter.cn/a/sphash.js)的脚本和url测试得知，下面主要对其进行分析：
 
-###3.1 sphash.js关键代码：
+###3.1 [sphash.js](http://www.shooter.cn/a/sphash.js)关键代码：
 sphash脚本主要进行文件的分片和各个分片hash值得计算，关键通过以下两段代码实现。
 
 3.1.1 文件分片代码
