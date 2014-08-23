@@ -239,7 +239,7 @@ dl .meta {
     margin-top: 14px;
 }
 
-.listing-item,.listing-seperator{list-style-type:none;}
+//.listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{
     padding:.2em 1em;
 
