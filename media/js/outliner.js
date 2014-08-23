@@ -14,7 +14,7 @@ $(function() {
 $(this).html('<a name="' + id + '"></a>'+$(this).html());
     });
 
-    var outline_ul = $('<ul style="list-style-type: none"></ul>');
+    var outline_ul = $('<ul></ul>');
     $.each(dict, function (idx, val) {
         outline_ul.append($('<li></li>')
                              .html('<span><a href="#' + val + '">' + idx + '</a></span>'));
@@ -61,7 +61,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
             c = container.width(),
             a = h2outline.width();
         h2outline.css('right',
-                      (w - c) / 2 - a - 50);
+                      (w - c) / 2 - a - 55);
     });
 
     $(window).resize();
