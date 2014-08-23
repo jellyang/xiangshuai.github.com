@@ -211,7 +211,8 @@ img.avatar {
 // 标题下说明
 .top-meta{
 	color: #888;
-	font-size: 12px;
+	font-size: 10px;
+	margin-bottom: 5px;
 }
 .meta{
     text-align:right;
