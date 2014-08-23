@@ -154,7 +154,7 @@ hr {
     margin: 0 0 22px 0;
 }
 a {
-    color: #dd0000;
+    color: #428bca;
     text-decoration:none;	//超链接无下划线
 }
 a:visited {
@@ -200,7 +200,7 @@ nav a {
     padding: 0.7em 1em;
 }
 nav a:hover {
-    background-color: #ff0000;
+    background-color: #428bca;
     color: #f9f9f9;
     text-decoration: none;
 }
