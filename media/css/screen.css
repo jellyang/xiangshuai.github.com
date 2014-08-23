@@ -55,7 +55,7 @@ q:before, q:after {
 	margin: 15px 0;
 }
 
-.content .tag-box li{
+.tag-box li{
 	display: inline-block;
 	line-height: 1.8;
 	margin: 0 3px;
@@ -65,7 +65,7 @@ q:before, q:after {
     border-radius: 4px;
     padding: 2px 4px;
 }
-a:hover, a:focus {
+.tag-box li a:hover, .tag-box li a:focus {
     text-decoration: none;
 }
 
