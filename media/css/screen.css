@@ -57,8 +57,8 @@ q:before, q:after {
 
 .content .tag-box li{
 	display: inline-block;
-	line-height: 1.8
-	margin: 0 3px
+	line-height: 1.8;
+	margin: 0 3px;
 }
 .tag-box li a {
     background-color: rgba(255, 204, 204, 0.3);
