@@ -60,6 +60,14 @@ q:before, q:after {
 	line-height: 1.8
 	margin: 0 3px
 }
+.tag-box li a {
+    background-color: rgba(255, 204, 204, 0.3);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
 
 sup {
     top: -0.5em;
