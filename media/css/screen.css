@@ -246,7 +246,11 @@ dl .meta {
 }
 
 .listing-item time{color:#999999;}
-.listing-seperator{font-weight:bold;}
+.listing-seperator{
+    border-bottom: 2px dashed rgba(153, 0, 0, 0.376);
+    color: rgba(153, 0, 0, 0.8);
+    font-size: 24px;
+}
 
 
 .paginator {
