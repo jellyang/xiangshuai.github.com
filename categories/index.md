@@ -4,9 +4,11 @@ layout: page
 ---
 
 <div id='tag_cloud'>
+<ul class="tag-box">
 {% for cat in site.categories %}
-<a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a>
+<li><a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }}<sup>{{ cat[1].size }}<sup></a></li>
 {% endfor %}
+</ul>
 </div>
 
 <ul class="listing">
