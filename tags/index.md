@@ -6,7 +6,7 @@ layout: page
 <div id='tag_cloud'>
 <ul class="tag-box">
 {% for tag in site.tags %}
-<li><a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}<sup>{{ tag[1].size }}<sup></a></li></a>
+<li><a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}<sup>{{ tag[1].size }}</sup></a></li></a>
 {% endfor %}
 </ul>
 </div>

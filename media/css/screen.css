@@ -126,6 +126,11 @@ h3 {
     font-size: 18px;
     line-height: 24px;
 }
+h1, h2, h3, h4, h5, h6, strong {
+    line-height: 1.8;
+    text-shadow: 0 1px 0 #fff, 0 1px 1px rgba(170, 170, 170, 0.8);
+}
+
 section>h3 {
     margin: 0 0 24px 0;
 }
