@@ -94,14 +94,13 @@ sphash脚本主要进行文件的分片和各个分片hash值得计算，关键�
 > 由于编码原因：所以需将上述url中的`\u0026`用`&`代替
 
 通过进行上述url请求，即可请求道所需要的字幕文件。另外，经过测试可知，上述链接会随时间进行改变，所以每次得重新进行请求字幕列表，在根据选择列表中的条目进行构建url，直接用上述链接可能失效。
-![](http://xiangshuai.github.io/resources/20140823204237.png)
 
 ##4 脚本实现代码：
 根据以上分析的流程，用Python进行实现，通过简单操作便可方便的从射手网下载到字幕。
 
 GitHub源代码: [shooter-subtitle-downloader](https://github.com/xiangshuai/shooter-subtitle-downloader)
 
-##参考：
+##5 参考：
 1. 伯乐在线:[“你所写过的最好的Python脚本是什么？”](http://blog.jobbole.com/75244/)
 2. GitHub: [subtitle-downloader](https://github.com/manojmj92/subtitle-downloader)
 3. SparkMD5:[http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html](http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html)
