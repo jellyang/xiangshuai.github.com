@@ -13,3 +13,5 @@ GitHub主页: [https://github.com/xiangshuai](https://github.com/xiangshuai)
 Scrapy doc: [http://doc.scrapy.org/en/latest/index.html](http://doc.scrapy.org/en/latest/index.html)
 
 Learn Python: [http://learnpythonthehardway.org/book/](http://learnpythonthehardway.org/book/)
+
+Deep Learning: [http://www.iro.umontreal.ca/~bengioy/dlbook/](http://www.iro.umontreal.ca/~bengioy/dlbook/)
