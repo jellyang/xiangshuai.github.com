@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Kevin" />
+    <title>shooter subtitle downloader详细分析 | Kevin</title>
+    <link href="/feed/" rel="alternate" title="Kevin" type="application/atom+xml" />
+    
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <link href='/media/webfonts/ss-social.css' rel='stylesheet'>
+    <link href='/media/webfonts/ss-standard.css' rel='stylesheet'>
+    <link href="/media/css/font-awesome.css" rel="stylesheet">
+    <link href="/media/css/screen.css" rel="stylesheet">
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/media/js/outliner.js" ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <div class="buttons">
+          <a href="/" class="ss-icon" title="Homepage">home</a>
+          <a href="/categories" class="ss-icon" title="Category" >list</a>
+          <a href="/tags" class="ss-icon" title="Tags" >tags</a>
+          <a href="/guestbook" class="ss-icon" title="Guest Book" >talk</a>
+          <a href="/about" class="ss-icon" title="About" >user</a>
+	  <a href="/links" class="ss-icon" title="collect links">link</a>
+          <a href="/feed" class="ss-icon" title="Subscribe RSS" >rss</a>
+        </div>
+        <h1>shooter subtitle downloader详细分析</h1>
+        </header>
+        <hr>
+        <article class="content">
+        <section class="top-meta">
+
+<span class="categories">
+  categories
+  
+  <a href="/categories/#web" title="web">web</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  tags
+  
+  <a href="/tags/#电影" title="电影">电影</a>&nbsp;
+  
+  <a href="/tags/#电影字幕" title="电影字幕">电影字幕</a>&nbsp;
+  
+  <a href="/tags/#Python" title="Python">Python</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h2>1. 动机</h2>
+
+<p>前段时间刚刚学习了一下Python，感觉Python确实非常的简单和强大，碰巧逛微博时发现了伯乐在线上面的一篇文章：<a href="http://blog.jobbole.com/75244/">“你所写过的最好的Python脚本是什么？”</a>其中有个叫<a href="https://github.com/manojmj92/subtitle-downloader">subtitle-downloader</a>的脚本引发了我的兴趣。此脚本可以根据电影在网上下载对应的字幕，可惜只能在<a href="http://thesubdb.com/">thesubdb</a>网下载英文字幕。由于我也非常喜欢看电影，所以萌生了可下载中文字幕的Python脚本，也作为这段时间学习Python语言的实践总结。</p>
+
+<h2>2. 国内字幕网站</h2>
+
+<p>国内比较知名的字幕网站有<a href="http://www.yyets.com/" title="人人影视">人人影视</a>和<a href="http://www.shooter.cn/" title="射手网">射手网</a>，所以分别分析了一下两个网站的html请求，主要采用firefox和超级赞的firebug插件进行分析。</p>
+
+<h3>2.1 <a href="http://www.yyets.com/">人人影视</a>：</h3>
+
+<p>首先我个人非常喜欢人人影视提供的字幕，字幕质量高且字体漂亮精致，所以我就先对人人影视网站的html文件进行分析，分析结果比较失望。主要有以下方面原因：</p>
+
+<blockquote><ol>
+<li>许多电影的字幕人人影视都没有收录</li>
+<li>电影字幕主要通过关键字进行搜索，下载的字幕可能与实际电影不同步</li>
+<li>没有发现有提供的相关的API进行下载字幕</li>
+</ol>
+</blockquote>
+
+<h3>2.2 <a href="http://www.shooter.cn/">射手网</a>：</h3>
+
+<p>接着进行射手网的html分析，意外发现了一个惊喜，射手网除了提供关键字进行检索，而且可通过html5和Md5技术进行精确匹配电影文件对应的字幕，测试了几个文件，都搜寻到了结果，而且下载到的字幕也比较令人满意，所以最终采用射手网提供的字幕和基本流程进行Python脚本的开发。</p>
+
+<h2>3. 详细分析射手网精确匹配流程</h2>
+
+<p>由于采用了比较文件hash值进行检索字幕，所以匹配到字幕的精度非常的高，通过进行实际操作和对射手网的html和javascript脚本进行分析，得到了精确匹配字幕的大致流程：</p>
+
+<blockquote><ol>
+<li>通过拖拽文件到搜索框</li>
+<li>通过html5技术中的文件操作进行文件处理，这里没有上传整个文件，仅仅上传了文件中的4段分片（每段分片大概4KB），总计16KB</li>
+<li>通过SparkMd5对上传的4段分片进行hash值计算，合在一起作为此文件的唯一标记filehash</li>
+<li>通过filehash即文件名获取此文件对应的字幕文件列表，并以json格式输出</li>
+<li>json中的每条则记录了字幕的链接和其对应延时等信息</li>
+<li>通过json中提供的链接便可下载对应电影的字幕文件</li>
+</ol>
+</blockquote>
+
+<p>关于上述的精确匹配过程，主要是通过分析<a href="http://www.shooter.cn/a/sphash.js">sphash.js</a>的脚本和url测试得知，下面主要对其进行分析：</p>
+
+<h3>3.1 <a href="http://www.shooter.cn/a/sphash.js">sphash.js</a>关键代码：</h3>
+
+<p>sphash脚本主要进行文件的分片和各个分片hash值得计算，关键通过以下两段代码实现。</p>
+
+<p>3.1.1 文件分片代码</p>
+
+<pre><code>a.CalcFileHashs = function (d) {
+        var e = 4096;
+        var c = Math.min(d.size, 4096);
+        a.getSliceHash(d, c, Math.min(c + e, d.size), 0);
+        c = Math.floor(d.size / 3 * 2);
+        a.getSliceHash(d, c, Math.min(c + e, d.size), 1);
+        c = Math.floor(d.size / 3);
+        a.getSliceHash(d, c, Math.min(c + e, d.size), 2);
+        c = Math.max(0, d.size - 8192);
+        a.getSliceHash(d, c, Math.min(c + e, d.size), 3)
+    };
+</code></pre>
+
+<p>上面函数参数d代表文件的基本信息包括：大小、文件路径等信息，主要进行文件分片操作，可看出每个分片大致为4096字节。下图为d的格式：
+<img src="http://xiangshuai.github.io/resources/20140823185020.png" alt="" /></p>
+
+<p>3.1.2 hash值计算代码</p>
+
+<pre><code>a.getSliceHash = function (g, i, d, h) {
+        var c = new FileReader();
+        c.onload = function (j) {
+            if (j.target.readyState == FileReader.DONE) {
+                var f = j.target.result;
+                var k = new SparkMD5.ArrayBuffer();
+                k.append(f);
+                a.addSliceHash(k.end(), h)
+            }
+        };
+        var e = g.slice(i, d, 'application/experimental');
+        c.readAsArrayBuffer(e)
+    };
+</code></pre>
+
+<p>上述代码的作用是对某个分片进行读取并通过SparkMD5算法进行hash值计算，关于SparkMD5算法比较复杂，感兴趣自行分析，这里就不做分析了。</p>
+
+<h3>3.2 url测试：</h3>
+
+<p>通过获取到文件4个分片的hash值，变可以精确的进行文件匹配。主要通过以下两个url请求。
+3.2.1 获取对应文件的字幕列表</p>
+
+<pre><code>https://www.shooter.cn/api/subapi.php?filehash=d751294c05ec7ce0dad50ba97807cac6%3Bde12cb6be164a22a7db10d9fb69d6db5%3Bd1a9a584d3a1846cd0fc7711b8ba40ed%3B0b9a6ceb459802fcec506e2f98d10392&amp;pathinfo=Divergent.2014.RETAIL.1080p.WEB-DL.H264.AC3-EVO.mkv&amp;format=json
+</code></pre>
+
+<p>通过上面url可得到返回的字幕列表，并以json格式输出：</p>
+
+<pre><code>[{"Desc":"","Delay":0,"Files":[{"Ext":"srt","Link":"https://www.shooter.cn/api/subapi.php?fetch=MTQwODc5NjY1N3wwMms0NGRCNC1UNmZPekdvLXJfRko2bU8zNkE1eGFyWndlRzFSOC1OZUFKOWpCRVMtVEc4MmZXTVlwNjR6NjdiZkpUZW12eG9JRjFWRHgwN01QWnc2Y01vZGlhRUl1NHMxbm1UT3ZPa1UwZXhheTc1SkJqRlhrOFc3cWQ1RjROWXg1aWRJTlJ5NDBfMGN4UjUwZjFJVC1SYzBqRTRwUU1CM2pRMGQtWT18oXpmBxVzkrWQj2gHyNldXfRT2FhEZI9eOPbRR8RNulc=\u0026nonce=%98%EA-%0F%BFr%AA%17%81%E0%5EU%83~%88%DB"}]},
+{"Desc":"","Delay":0,"Files":[{"Ext":"srt","Link":"https://www.shooter.cn/api/subapi.php?fetch=MTQwODc5NjY1N3xqc3RVNVVFMl83OXVJMVhhVjZGQUpOS2UxMVFQSzFRWmdGc2huaVBNVG05UDNobVJYeWg0NlcyN3FmZTFKUUVPaHk3Y01iNVNGbmM3ZS13M2dCWkc1by0tUVg4Yy1JbEN5b3RBWURvUkViY3RzSkdhWnJSRTNubERXZ0JJYVpNc3JUSW9RV01YQWRGYjV0MklIanVuRXdCQVV6UXhDWDZFaVFJN3FlZz18G86t0qzz5vpC6_1ObZWtI-sp4h7qI7ZtiTmlTFRANBM=\u0026nonce=J%CCF%B7%88%B6s%A6%FD%B6%1A%9FZ%5D%B8%7B"}]},
+{"Desc":"","Delay":0,"Files":[{"Ext":"srt","Link":"https://www.shooter.cn/api/subapi.php?fetch=MTQwODc5NjY1N3w5VjJDUV9SYXpnNzdDeUtFRGFSQ0xEekdqWlp1YW9ZbEZCOUlBOG83RlJ4al9nOFFjc3ROcXJfeVFSTjcwaHVfZkdVeTdodC1jZ1c5RFNPMktMeDczQzVRVW1JMkFVX3VQQi1tTW9hOG5hVWNrOWxHQkVPM2NxUTNmWlkxTzBaSC0tMDcybmMtS1Y0STZHbFRtNF9rMll6WFJweFB0S0F2QlgxZUJQWT18NXOIF52s_qsZIuupexlMqRLZV4z8lzLX1nOSKVfskJo=\u0026nonce=%2Fu%E2%C4A%B7%DA%3EZ%ADr%A4m%CE%A3%B7"}]}]
+</code></pre>
+
+<p><img src="http://xiangshuai.github.io/resources/20140823204055.png" alt="" /></p>
+
+<p>3.2.2 获取列表中的其中一个条目，根据此条目中的信息便可获取字幕文件的url地址，以上述条目中的第一条为例：</p>
+
+<pre><code>https://www.shooter.cn/api/subapi.php?fetch=MTQwODc5NjY1N3wwMms0NGRCNC1UNmZPekdvLXJfRko2bU8zNkE1eGFyWndlRzFSOC1OZUFKOWpCRVMtVEc4MmZXTVlwNjR6NjdiZkpUZW12eG9JRjFWRHgwN01QWnc2Y01vZGlhRUl1NHMxbm1UT3ZPa1UwZXhheTc1SkJqRlhrOFc3cWQ1RjROWXg1aWRJTlJ5NDBfMGN4UjUwZjFJVC1SYzBqRTRwUU1CM2pRMGQtWT18oXpmBxVzkrWQj2gHyNldXfRT2FhEZI9eOPbRR8RNulc=&amp;nonce=%98%EA-%0F%BFr%AA%17%81%E0%5EU%83~%88%DB
+</code></pre>
+
+<blockquote><p>由于编码原因：所以需将上述url中的<code>\u0026</code>用<code>&amp;</code>代替</p></blockquote>
+
+<p>通过进行上述url请求，即可请求道所需要的字幕文件。另外，经过测试可知，上述链接会随时间进行改变，所以每次得重新进行请求字幕列表，在根据选择列表中的条目进行构建url，直接用上述链接可能失效。</p>
+
+<h2>4 脚本实现代码：</h2>
+
+<p>根据以上分析的流程，用Python进行实现，通过简单操作便可方便的从射手网下载到字幕。</p>
+
+<p>GitHub源代码: <a href="https://github.com/xiangshuai/shooter-subtitle-downloader">shooter-subtitle-downloader</a></p>
+
+<h2>5 参考：</h2>
+
+<ol>
+<li>伯乐在线:<a href="http://blog.jobbole.com/75244/">“你所写过的最好的Python脚本是什么？”</a></li>
+<li>GitHub: <a href="https://github.com/manojmj92/subtitle-downloader">subtitle-downloader</a></li>
+<li>SparkMD5:<a href="http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html">http://www.ruby-doc.org/gems/docs/c/condo-1.0.4/app/assets/javascripts/condo/md5/spark-md5_js.html</a></li>
+<li>MD5 Shootout:<a href="http://jsperf.com/md5-shootout/7">http://jsperf.com/md5-shootout/7</a></li>
+<li>Python md5 module: <a href="http://effbot.org/librarybook/md5.htm">http://effbot.org/librarybook/md5.htm</a></li>
+<li>MD5测试比对：<a href="http://www.cmd5.com/">http://www.cmd5.com/</a></li>
+</ol>
+
+
+</section>
+<section class="meta">
+<span class="author">
+  <a href="http://xiangshuai.github.com">Kevin</a>
+</span>
+<span class="time">
+  /
+  <time datetime="2014-08-23">2014-08-23</time>
+</span>
+</section>
+
+<section align="right">
+<br/>
+<span>
+	<a  href="/2014/08/understand-https/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/2014/08/Mathematics-for-Computer-Graphics/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+<section class="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="/2014/08/shooter-subtitle-downloader" data-title="shooter subtitle downloader详细分析" data-url="xiangshuai.github.com//2014/08/shooter-subtitle-downloader/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"kevingit"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = 'https://xiangshuai.github.com//2014/08/understand-https/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        url = 'https://xiangshuai.github.com//2014/08/Mathematics-for-Computer-Graphics/';
+        
+        }
+        if (url) {
+            window.location = url;
+        }
+  });
+})
+</script>
+
+
+        </article>
+	<a style="position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top">
+            <img src="/media/assets/btt.png" />
+        </a> 
+      </div>
+
+    <footer>
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2008 - 2014 by <a href="http://xiangshuai.github.com/about/">Kevin</a> | <span class="label label-info">2014-08-31 20:03:19 CST</span></small></p>
+    </footer>
+
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53993758-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
