@@ -1,6 +1,6 @@
 ---
 layout: post
-title: \[转\]数学在计算机图形学中的应用
+title: [转]数学在计算机图形学中的应用
 categories:
 - Computer Graphics
 tags:
