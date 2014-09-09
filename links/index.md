@@ -15,3 +15,5 @@ Scrapy doc: [http://doc.scrapy.org/en/latest/index.html](http://doc.scrapy.org/e
 Learn Python: [http://learnpythonthehardway.org/book/](http://learnpythonthehardway.org/book/)
 
 Deep Learning: [http://www.iro.umontreal.ca/~bengioy/dlbook/](http://www.iro.umontreal.ca/~bengioy/dlbook/)
+
+Hacker news: [https://news.ycombinator.com/](https://news.ycombinator.com/)
