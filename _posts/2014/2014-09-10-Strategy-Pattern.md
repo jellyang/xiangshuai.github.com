@@ -78,7 +78,7 @@ Strategy接口定义了Strategy对象的行为；具体的ConcreteStrategy类实
 
 后续...
 
-##5 参考：
+##5. 参考：
 1. [Java Comparable and Comparator Example to sort Objects](http://www.journaldev.com/780/java-comparable-and-comparator-example-to-sort-objects)
 2. [Java Fundamentals Tutorial : Design Patterns](https://thenewcircle.com/static/bookshelf/java_fundamentals_tutorial/design_patterns.html)
 3. [Examples of GoF Design Patterns](http://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns)
