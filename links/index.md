@@ -19,3 +19,5 @@ Deep Learning: [http://www.iro.umontreal.ca/~bengioy/dlbook/](http://www.iro.umo
 Hacker news: [https://news.ycombinator.com/](https://news.ycombinator.com/)
 
 JournalDev(Java): [http://www.journaldev.com/](http://www.journaldev.com/)
+
+stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
