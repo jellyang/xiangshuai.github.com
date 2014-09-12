@@ -21,3 +21,9 @@ Hacker news: [https://news.ycombinator.com/](https://news.ycombinator.com/)
 JournalDev(Java): [http://www.journaldev.com/](http://www.journaldev.com/)
 
 stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
+
+伯乐在线: [http://blog.jobbole.com/](http://blog.jobbole.com/)
+
+pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
+
+OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
