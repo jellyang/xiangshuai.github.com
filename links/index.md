@@ -27,3 +27,5 @@ stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
 pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
 OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
+
+Tutorials **library**: [http://www.tutorialspoint.com/index.htm](http://www.tutorialspoint.com/index.htm)
