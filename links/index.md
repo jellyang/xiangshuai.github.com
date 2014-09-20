@@ -29,7 +29,8 @@ pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/
 OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
 
 Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoint.com/)
-	
+>	
 - [The C++ Programming Language](http://www.tutorialspoint.com/cplusplus/index.htm)
 - [Java Design Patterns](http://www.tutorialspoint.com/design_pattern/index.htm)
 - [Python Programming](http://www.tutorialspoint.com/python/index.htm)
+
