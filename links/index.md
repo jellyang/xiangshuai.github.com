@@ -30,6 +30,6 @@ OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tuto
 
 Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoint.com/)
 	
-1. [The C++ Programming Language](http://www.tutorialspoint.com/cplusplus/index.htm)
-2. [Java Design Patterns](http://www.tutorialspoint.com/design_pattern/index.htm)
-3. [Python Programming](http://www.tutorialspoint.com/python/index.htm)
+- [The C++ Programming Language](http://www.tutorialspoint.com/cplusplus/index.htm)
+- [Java Design Patterns](http://www.tutorialspoint.com/design_pattern/index.htm)
+- [Python Programming](http://www.tutorialspoint.com/python/index.htm)
