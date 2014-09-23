@@ -34,3 +34,5 @@ Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoin
 - [Java Design Patterns](http://www.tutorialspoint.com/design_pattern/index.htm)
 - [Python Programming](http://www.tutorialspoint.com/python/index.htm)
 
+C++ Reference: [http://www.cplusplus.com/reference/](http://www.cplusplus.com/reference/)
+
