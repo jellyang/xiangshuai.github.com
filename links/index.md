@@ -37,3 +37,7 @@ Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoin
 C++ Reference: [http://www.cplusplus.com/reference/](http://www.cplusplus.com/reference/)
 
 Sourceforge: [http://sourceforge.net/](http://sourceforge.net/)
+
+blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.github.io/python/)
+
+廖雪峰: [http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/)
