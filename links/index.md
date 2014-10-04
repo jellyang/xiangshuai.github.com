@@ -41,3 +41,5 @@ Sourceforge: [http://sourceforge.net/](http://sourceforge.net/)
 blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.github.io/python/)
 
 廖雪峰: [http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/)
+
+C++ Cookbook: [http://www.cppblog.com/mzty/](http://www.cppblog.com/mzty/)
