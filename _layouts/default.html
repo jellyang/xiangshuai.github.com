@@ -11,6 +11,7 @@
     <link href='/media/webfonts/ss-standard.css' rel='stylesheet'>
     <link href="/media/css/font-awesome.css" rel="stylesheet">
     <link href="/media/css/screen.css" rel="stylesheet">
+	<link href="/media/prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/media/js/outliner.js" ></script>
   </head>
@@ -19,12 +20,12 @@
       <div id="main" role="main">
         <header>
         <div class="buttons">
-          <a href="/" class="ss-icon" title="Homepage">home</a>
-          <a href="/categories" class="ss-icon" title="Category" >list</a>
+          <a href="/" class="ss-icon" title="Home">home</a>
+          <a href="/categories" class="ss-icon" title="Categories" >list</a>
           <a href="/tags" class="ss-icon" title="Tags" >tags</a>
           <a href="/guestbook" class="ss-icon" title="Guest Book" >talk</a>
           <a href="/about" class="ss-icon" title="About" >user</a>
-	  <a href="/links" class="ss-icon" title="collect links">link</a>
+	  <a href="/links" class="ss-icon" title="Links">link</a>
           <a href="/feed" class="ss-icon" title="Subscribe RSS" >rss</a>
         </div>
         <h1>{{ page.title }}</h1>
@@ -43,6 +44,14 @@
     </footer>
 
     </div>
+	<script type="text/javascript" src="/media/prettify/prettify.js"></script>
+	<script type="text/javascript">
+    // 需要引入jQuery
+    $(document).ready(function() {
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+    });
+	</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
