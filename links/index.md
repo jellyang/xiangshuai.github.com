@@ -45,3 +45,5 @@ blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.
 廖雪峰: [http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/)
 
 C++ Cookbook: [http://www.cppblog.com/mzty/](http://www.cppblog.com/mzty/)
+
+Alexia blog: [http://www.cnblogs.com/lanxuezaipiao/](http://www.cnblogs.com/lanxuezaipiao/)
