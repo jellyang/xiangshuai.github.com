@@ -30,6 +30,8 @@ stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
 
 伯乐在线: [http://blog.jobbole.com/](http://blog.jobbole.com/)
 
+伯乐头条：[http://top.jobbole.com/?utm_source=jobboletop-top-nav](http://top.jobbole.com/?utm_source=jobboletop-top-nav)
+
 pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
 OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
@@ -51,3 +53,5 @@ blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.
 C++ Cookbook: [http://www.cppblog.com/mzty/](http://www.cppblog.com/mzty/)
 
 Alexia blog: [http://www.cnblogs.com/lanxuezaipiao/](http://www.cnblogs.com/lanxuezaipiao/)
+
+**NoAlGo blog**: [http://noalgo.info/](http://noalgo.info/)
