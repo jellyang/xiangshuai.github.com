@@ -1,57 +1,72 @@
 ---
 title: links
-layout: page
+layout: wiki
 comments: yes
 ---
 
-GitHub主页: [https://github.com/xiangshuai](https://github.com/xiangshuai)
+##博客
 
-LeetCode: [https://oj.leetcode.com/](https://oj.leetcode.com/)
+- 结构之法 算法知道(July): [http://blog.csdn.net/v_JULY_v](http://blog.csdn.net/v_JULY_v)
 
-结构之法 算法知道(July): [http://blog.csdn.net/v_JULY_v](http://blog.csdn.net/v_JULY_v)
+- **NoAlGo blog**: [http://noalgo.info/](http://noalgo.info/)
 
-CodeProject: [http://www.codeproject.com/](http://www.codeproject.com/)
+- 廖雪峰: [http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/)
 
-CodePlex: [http://www.codeplex.com/](http://www.codeplex.com/)
+- blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.github.io/python/)
 
-数据结构可视化: [http://www.comp.nus.edu.sg/~stevenha/visualization/index.html](http://www.comp.nus.edu.sg/~stevenha/visualization/index.html)
+- Alexia blog: [http://www.cnblogs.com/lanxuezaipiao/](http://www.cnblogs.com/lanxuezaipiao/)
 
-Scrapy doc(python): [http://doc.scrapy.org/en/latest/index.html](http://doc.scrapy.org/en/latest/index.html)
+##社区
 
-Learn Python: [http://learnpythonthehardway.org/book/](http://learnpythonthehardway.org/book/)
+- stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
 
-Deep Learning: [http://www.iro.umontreal.ca/~bengioy/dlbook/](http://www.iro.umontreal.ca/~bengioy/dlbook/)
+- Sourceforge: [http://sourceforge.net/](http://sourceforge.net/)
 
-Hacker news: [https://news.ycombinator.com/](https://news.ycombinator.com/)
+- CodeProject: [http://www.codeproject.com/](http://www.codeproject.com/)
 
-JournalDev(Java): [http://www.journaldev.com/](http://www.journaldev.com/)
+- CodePlex: [http://www.codeplex.com/](http://www.codeplex.com/)
 
-stack**overflow**: [http://stackoverflow.com/](http://stackoverflow.com/)
 
-伯乐在线: [http://blog.jobbole.com/](http://blog.jobbole.com/)
+##编程
 
-伯乐头条：[http://top.jobbole.com/?utm_source=jobboletop-top-nav](http://top.jobbole.com/?utm_source=jobboletop-top-nav)
+###Python
 
-pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
+- Learn Python: [http://learnpythonthehardway.org/book/](http://learnpythonthehardway.org/book/)
+- pythonlibs: [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
+- Scrapy doc(python): [http://doc.scrapy.org/en/latest/index.html](http://doc.scrapy.org/en/latest/index.html)
 
-OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
+###C++
 
-Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoint.com/)
+- C++ Reference: [http://www.cplusplus.com/reference/](http://www.cplusplus.com/reference/)
+- C++ Cookbook: [http://www.cppblog.com/mzty/](http://www.cppblog.com/mzty/)
+- Tutorials **library**: [http://www.tutorialspoint.com/](http://www.tutorialspoint.com/)
 >	
 - [The C++ Programming Language](http://www.tutorialspoint.com/cplusplus/index.htm)
 - [Java Design Patterns](http://www.tutorialspoint.com/design_pattern/index.htm)
 - [Python Programming](http://www.tutorialspoint.com/python/index.htm)
 
-C++ Reference: [http://www.cplusplus.com/reference/](http://www.cplusplus.com/reference/)
+- OpenCV-Python Tutorials: [http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html](http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html)
 
-Sourceforge: [http://sourceforge.net/](http://sourceforge.net/)
+###Java
 
-blog(Python): [http://hujiaweibujidao.github.io/python/](http://hujiaweibujidao.github.io/python/)
+- JournalDev(Java): [http://www.journaldev.com/](http://www.journaldev.com/)
 
-廖雪峰: [http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/)
 
-C++ Cookbook: [http://www.cppblog.com/mzty/](http://www.cppblog.com/mzty/)
+##资讯
+- Hacker news: [https://news.ycombinator.com/](https://news.ycombinator.com/)
 
-Alexia blog: [http://www.cnblogs.com/lanxuezaipiao/](http://www.cnblogs.com/lanxuezaipiao/)
+- 伯乐在线: [http://blog.jobbole.com/](http://blog.jobbole.com/)
+>
+- 头条：[http://top.jobbole.com/?utm_source=jobboletop-top-nav](http://top.jobbole.com/?utm_source=jobboletop-top-nav)
 
-**NoAlGo blog**: [http://noalgo.info/](http://noalgo.info/)
+
+##新技术
+
+- Deep Learning: [http://www.iro.umontreal.ca/~bengioy/dlbook/](http://www.iro.umontreal.ca/~bengioy/dlbook/)
+
+##其他
+
+- 数据结构可视化: [http://www.comp.nus.edu.sg/~stevenha/visualization/index.html](http://www.comp.nus.edu.sg/~stevenha/visualization/index.html)
+
+
+
