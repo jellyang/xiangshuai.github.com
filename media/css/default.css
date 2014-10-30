@@ -1,0 +1,8 @@
+body .hide{display:none;}
+
+/***************Wiki Style*****************/
+.wiki h2{cursor:pointer;}
+.wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
+.wiki ul p{margin-bottom:5px;}
+.wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
+
