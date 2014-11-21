@@ -1,6 +1,6 @@
 ---
 title: links
-layout: wiki
+layout: post
 comments: yes
 ---
 

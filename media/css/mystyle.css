@@ -1,0 +1,63 @@
+//.listing-item,.listing-seperator{list-style-type:none;}
+.listing-item a{
+    padding:.2em 1em;
+
+}
+
+.listing-item time{color:#999999;}
+.listing-seperator{
+	line-height: 1.8;
+    border-bottom: 2px dashed rgba(153, 0, 0, 0.376);
+    color: rgba(153, 0, 0, 0.8);
+    font-size: 24px;
+}
+
+
+.paginator {
+font: 14px Arial,Helvetica,sans-serif;
+color: #AAA;
+margin: 20px 0;
+line-height: 150%;
+display: block;
+}
+
+.paginator span{
+padding: 0 4px;
+margin: 2px;
+text-decoration: none;
+}
+
+.paginator .current-page {
+color: white;
+background: #8B0000;
+}
+
+
+
+footer{
+display:block;
+border-top: 1px dashed #CCC;
+}
+
+footer small {
+font-size: 13px;
+color: #999;
+}
+
+footer a {
+margin: 1px;
+border: 1px solid rgba(1,1,1,0);
+border-bottom: 1px dashed #BBB;
+color: #B9221F;
+text-decoration: none;
+}
+
+footer a:hover {
+    color: rgba(250,250,250,1.0) !important; 
+    -webkit-border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.45);
+    text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(110,110,110,1.0)), to(rgba(100,100,100,1.0)));
+    -webkit-box-shadow: rgba(0,0,0,1.0) 0px 0px 2px,rgba(255,255,255,0.15) 0px 1px 1px inset;
+    text-decoration: none;
+}

@@ -1,66 +1,76 @@
 ---
 layout: default
+isPost: true
+comment: true
 ---
 
-<section class="top-meta">
-{% if page.categories.size != 0 %}
-<span class="categories">
-  categories
-  {% for cat in page.categories %}
-  <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
-  {% endfor %}
-</span>
+{% assign publishData =  page.date|date:"%Y-%m-%d %H:%M:%S" %}
+{% if page.updateData %}
+{% assign lastData =  page.updateData|date:"%Y-%m-%d %H:%M:%S" %}
+{% else %}
+{% assign lastData =  page.date|date:"%Y-%m-%d %H:%M:%S" %}
 {% endif %}
-{% if page.tags.size != 0 %}
- | 
-<span class="tags">
-  tags
-  {% for tag in page.tags %}
-  <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
-  {% endfor %}
-</span>
+{% if page.previous %}
+    <link rel="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
 {% endif %}
-</section>
-<section class="post">
-{{ content }}
-</section>
-<section class="meta">
-<span class="author">
-  <a href="http://xiangshuai.github.com">{{ site.author }}</a>
-</span>
-<span class="time">
-  /
-  <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
-</span>
-</section>
+{% if page.next %}
+    <link rel="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
+{% endif %}
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="{{ page.title }}"/>
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:author" content="{{ site.author }}"/>
+<meta property="og:release_date" content="{{ lastData }}"/>
+<link rel="stylesheet" href="/javascripts/prettify/prettify.min.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+<div id="content" class="clearfix">
+    <div class="entry-header">
+        <div class="index-content">
+            <ul class="artical-cate">
+                {% for nav in site.nav %}
+                    <li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="entry">
+        <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <p class="entry-attr">作者: <span  class="entry-author">{{ site.author }}</span> | 更新日期: <time  class="entry-date">{{ lastData }}</time></p>
+        <p><blockquote>{{ page.description }}</blockquote></p>
+        {{ content }}
+        <div class="ad-content-footer"></div>
+        <footer class="unit-foot">
+            <div class="unit-inner unit-foot-inner">
+                <nav class="pagination">
+                    <ul>
+                        {% if page.previous %}
+                        <li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
+                        {% endif %}
+                        {% if page.previous and page.next %}
+                        <li class="pipe"> | </li>
+                        {% endif %}
+                        {% if page.next %}
+                        <li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <p class="gotop">
+                    <a href="#">Back to Top</a>
+                </p>
+            </div>
+        </footer>
+		{% include comments.md %}
+    </div>
 
-<section align="right">
-<br/>
-<span>
-	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
-	&nbsp;&nbsp;&nbsp;
-	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
-</span>
-</section>
-{% include comments.md %}
-<script type="text/javascript">
-$(function(){
-  $(document).keydown(function(e) {
-    var url = false;
-        if (e.which == 37 || e.which == 74) {  // Left arrow and J
-            {% if page.previous %}
-        url = '{{ site.url }}{{ page.previous.url }}';
-        {% endif %}
-        }
-        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
-            {% if page.next %}
-        url = '{{ site.url }}{{ page.next.url }}';
-        {% endif %}
-        }
-        if (url) {
-            window.location = url;
-        }
-  });
-})
-</script>
+    <div id="menuIndex" class="sidenav"></div>
+</div>
 
+<script src="/media/js/post.min.js" type="text/javascript"></script>
