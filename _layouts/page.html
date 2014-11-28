@@ -1,50 +1,24 @@
----
-layout: default
----
-
-<div id="content">
-    <div class="entry-page index-content">
-        <ul class="artical-cate">
-            {% for nav in site.nav %}
-                <li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
-            {% endfor %}
-        </ul>
-        <h1 class="entry-title">{{ page.title }}</h1>
-         {{ content }}
-        
-    </div>
-	<div id="post-pagination" class="paginator">
-
-  {% if paginator.previous_page %}
-    {% if paginato椤?/a>ous_page == 1 %}
-    {% else %}"><?                              椤?/a>
-    {% endif %}age{{paginator.previous_page}}"><?
-  {% else %}                          椤?/span>
-  {% endif %}ss="previous disabled"><?
-
-      {% if paginator.page == 1 %}
-      <span class="current-page">1</span>
-      {% else %}
-      <a href="/">1</a>
-
-
-
-      {% endif %}
-
-    {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <span class="current-page">{{count}}</span>
-      {% else %}
-      <a href="/page{{count}}">{{count}}</a>
-      {% endif %}
-    {% endfor %}
-
-  {% if paginator.next_page %}
-    <a class="next" href="/page{{paginator.next_page}}">彘〉></a>
-  {% else %}
-    <span class="next disabled" >彘〉></span>
-  {% endif %}
-  (?
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh"><![endif]-->
+<!--[if gt IE 7]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ page.title }}</title>
+<link href="/media/css/timeline.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div style="text-align:center;clear:both;">
 </div>
-
+<div class="content">
+{{ content }}
 </div>
+<div class="footer">
+  <div class="footer-content clearfix">
+    <div class="copyright"> Copyright ? 2011-2014  All Rights Reserved </div>
+  </div>
+</div>
+</body>
+</html>

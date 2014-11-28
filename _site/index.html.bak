@@ -6,21 +6,35 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>About me</title>
+<title>Kevin's Blog</title>
 <link href="/media/css/timeline.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div style="text-align:center;clear:both;">
 </div>
 <div class="content">
-<p><img src="http://xiangshuai.github.io/media/Batman-logo.jpg" alt="Batman" /></p>
+<ul class="listing">
 
-<p>计算机工作者.    <br/>
-喜欢电影、音乐。</p>
+</ul>
 
-<p>github : <a href="https://github.com/xiangshuai">https://github.com/xiangshuai</a></p>
+<div id="post-pagination" class="paginator">
 
-<p>LeetCode: <a href="https://oj.leetcode.com/">https://oj.leetcode.com/</a></p>
+  
+    <span class="previous disabled"><前页</span>
+  
+
+      
+      <a href="/">1</a>
+      
+
+    
+
+  
+    <span class="next disabled" >后页></span>
+  
+  (共篇)
+</div>
+
 
 </div>
 <div class="footer">
