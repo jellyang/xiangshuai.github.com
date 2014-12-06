@@ -32,15 +32,7 @@ comment: true
     }
 </style>
 <div id="content" class="clearfix">
-    <div class="entry-header">
-        <div class="index-content">
-            <ul class="artical-cate">
-                {% for nav in site.nav %}
-                    <li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+    
     <div class="entry">
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         <p class="entry-attr">作者: <span  class="entry-author">{{ site.author }}</span> | 更新日期: <time  class="entry-date">{{ lastData }}</time></p>

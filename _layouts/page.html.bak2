@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh"><![endif]-->
+<!--[if gt IE 7]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ page.title }}</title>
+ <link rel="stylesheet" href="/media/css/bootstrapv3.min.css" type="text/css" />
+ <link rel="stylesheet" href="/media/css/mystyle.css" type="text/css" />
+<link href="/media/css/timeline.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div style="text-align:center;clear:both;">
+</div>
+ <!-- nav -->
+        <div role="header" id="header">
+          <div class="container">
+            
+            <div id="pull" class="toggle-topbar menu-icon">
+              <a href="#"><span>Menu</span></a>
+            </div>
+            <div id="pull-menu" class="toogle-topbar-content">
+                <ul class="menu clearfix"><li class="first leaf active-trail"><a class="active active-trail" title="" href="/blogs/list.html">博客</a></li>
+                    <li class="leaf"><a title="" href="/blog/css3">CSS3</a></li>
+                    <li class="leaf"><a title="" href="/mobile">Mobile</a></li>
+                    <li class="leaf"><a title="Sass教程" href="http://www.cn-sass.com">Sass</a></li>
+                    <li class="leaf"><a title="响应式设计" href="/responsive">Responsive</a></li>
+                    <li class="leaf"><a title="译文" href="/blog/translations">译文</a></li>
+                    <li class="leaf"><a title="在线教程" href="/lessons.html">在线教程</a></li>
+                    <li class="leaf"><a title="" href="/resources/list.html">资源</a></li>
+                    <li class="leaf"><a title="" href="/demos/list.html">案例</a></li>
+                    <li class="leaf"><a title="在线工具" href="/source/front-end-developer-excellent-tool.html">工具</a></li>
+                    <li class="leaf"><a title="" href="/collective">周刊</a></li>
+                    <li class="last leaf"><a title="标签云" href="/tags">标签云</a></li>
+                </ul>        <!-- /#main-menu -->
+            </div>
+          </div>
+        </div>
+
+<div class="content">
+{{ content }}
+</div>
+
+</div>
+</body>
+</html>

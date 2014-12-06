@@ -1,3 +1,103 @@
+#header {
+    background-color: #333;
+    color: #fff;
+    height: 48px;
+    left: 0;
+    line-height: 48px;
+    min-width: 320px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#logo {
+    margin: 0 10px 0 0;
+}
+#logo a {
+    background: url("/resources/logo.png") no-repeat scroll center center / 48px auto #00a3cf;
+    height: 48px;
+    position: relative;
+    width: 48px;
+}
+.toggle-topbar {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 5px;
+}
+@media screen and (max-width: 768px) {
+    .toggle-topbar {
+        display: block;
+    }
+}
+.toggle-topbar a {
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    position: relative;
+    text-indent: -60px;
+    text-transform: uppercase;
+    width: 75px;
+}
+.toggle-topbar span {
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 16px;
+}
+#pull-menu .menu {
+    list-style: none outside none;
+}
+#pull-menu .menu li {
+    list-style: none outside none;
+    margin: 0 5px;
+    padding: 0;
+}
+#pull-menu .menu a {
+    color: #ccc;
+    display: block;
+    float: left;
+    padding: 0 10px;
+}
+#pull-menu .menu a:hover, #pull-menu .menu a.active {
+    color: #fff;
+}
+@media screen and (max-width: 960px) {
+    #pull-menu .menu li {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    #pull-menu .menu a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #pull-menu {
+        clear: left;
+        display: none;
+        width: 100%;
+    }
+    #pull-menu .menu {
+        background-color: #333;
+        clear: both;
+    }
+    #pull-menu .menu li {
+        margin: 0;
+        width: 33.3333%;
+    }
+    #pull-menu .menu li a {
+        float: none;
+    }
+}
+
+
 //.listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{
     padding:.2em 1em;
